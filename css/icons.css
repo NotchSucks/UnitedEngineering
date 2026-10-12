@@ -1,0 +1,37 @@
+/* ============================================
+   Lucide Icon Sizing
+   Icons rendered by lucide.createIcons()
+   ============================================ */
+
+/* Card icons */
+.card-icon [data-lucide],
+.card-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--color-primary);
+}
+
+/* Contact card icons */
+.contact-card-icon [data-lucide],
+.contact-card-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--color-primary);
+}
+
+/* Service block large icons */
+.service-icon-large [data-lucide],
+.service-icon-large svg {
+  width: 64px;
+  height: 64px;
+  stroke: var(--color-primary);
+  stroke-width: 1.5;
+}
+
+/* Footer contact icons */
+.footer-contact-item .icon [data-lucide],
+.footer-contact-item .icon svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--color-primary);
+}

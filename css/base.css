@@ -1,0 +1,92 @@
+/* ============================================
+   Base / Global Styles
+   ============================================ */
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+  color: var(--color-dark);
+  background-color: var(--color-bg);
+}
+
+/* ── Headings ── */
+h1 { font-size: var(--font-size-4xl); font-weight: var(--font-weight-extrabold); line-height: var(--line-height-tight); }
+h2 { font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); line-height: var(--line-height-tight); }
+h3 { font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); line-height: var(--line-height-tight); }
+h4 { font-size: var(--font-size-xl); font-weight: var(--font-weight-semibold); line-height: var(--line-height-tight); }
+h5 { font-size: var(--font-size-lg); font-weight: var(--font-weight-semibold); }
+h6 { font-size: var(--font-size-md); font-weight: var(--font-weight-semibold); }
+
+/* ── Text Utilities ── */
+.text-primary { color: var(--color-primary); }
+.text-accent  { color: var(--color-accent); }
+.text-grey    { color: var(--color-grey); }
+.text-white   { color: var(--color-white); }
+.text-center  { text-align: center; }
+
+.subtitle {
+  font-size: var(--font-size-md);
+  color: var(--color-grey);
+  font-weight: var(--font-weight-medium);
+  max-width: 640px;
+}
+
+/* ── Section Title Block ── */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.section-header h2 {
+  margin-bottom: var(--space-md);
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+.section-header .subtitle {
+  margin: var(--space-md) auto 0;
+}
+
+/* ── Links ── */
+a {
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+/* ── Selection ── */
+::selection {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-grey-light);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-grey);
+}

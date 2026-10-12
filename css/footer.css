@@ -1,0 +1,73 @@
+/* ============================================
+   Footer
+   ============================================ */
+
+.footer {
+  background: var(--color-dark);
+  color: var(--color-grey-light);
+  padding: var(--space-4xl) 0 var(--space-xl);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: var(--space-3xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.footer-brand img { height: 40px; margin-bottom: var(--space-md); }
+
+.footer-brand p {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-grey);
+  max-width: 320px;
+}
+
+.footer h5 {
+  color: var(--color-white);
+  margin-bottom: var(--space-lg);
+  font-size: var(--font-size-base);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: var(--space-sm);
+}
+
+.footer h5::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 30px; height: 2px;
+  background: var(--color-primary);
+}
+
+.footer ul li { padding: 6px 0; }
+
+.footer ul li a {
+  font-size: var(--font-size-sm);
+  color: var(--color-grey);
+  transition: all var(--transition-fast);
+}
+
+.footer ul li a:hover { color: var(--color-white); padding-left: 4px; }
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  font-size: var(--font-size-sm);
+}
+
+.footer-contact-item .icon { color: var(--color-primary); font-size: 16px; margin-top: 2px; }
+
+.footer-bottom {
+  border-top: 1px solid var(--color-dark-medium);
+  padding-top: var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+  color: var(--color-grey);
+}
