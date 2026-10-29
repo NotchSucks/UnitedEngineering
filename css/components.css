@@ -196,6 +196,7 @@
   overflow: hidden;
   position: relative;
   padding: var(--space-xl) 0;
+  width: 100%;
 }
 
 .logo-marquee::before,
@@ -211,40 +212,55 @@
 
 .logo-marquee::before {
   left: 0;
-  background: linear-gradient(to right, var(--color-bg), transparent);
+  background: linear-gradient(to right, var(--color-bg-alt), transparent);
 }
 
 .logo-marquee::after {
   right: 0;
-  background: linear-gradient(to left, var(--color-bg), transparent);
+  background: linear-gradient(to left, var(--color-bg-alt), transparent);
 }
 
 .logo-marquee-track {
   display: flex;
-  gap: var(--space-3xl);
   align-items: center;
-  animation: marquee 30s linear infinite;
   width: max-content;
+  will-change: transform;
+  animation: marquee 40s linear infinite;
+}
+
+.logo-marquee-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xl);
+  padding-right: var(--space-3xl);
+  flex-shrink: 0;
 }
 
 .logo-marquee-track img {
-  max-height: 44px;
+  height: 88px;
+  max-height: 88px;
   width: auto;
   object-fit: contain;
   filter: grayscale(30%);
-  opacity: 0.7;
-  transition: all var(--transition-base);
+  opacity: 0.85;
+  transition: filter var(--transition-base), opacity var(--transition-base), transform var(--transition-base);
   flex-shrink: 0;
 }
 
 .logo-marquee-track img:hover {
   filter: grayscale(0%);
   opacity: 1;
+  transform: scale(1.05);
+}
+
+#clients .logo-grid img {
+  max-height: 100px;
+  max-width: 240px;
 }
 
 @keyframes marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
 }
 
 /* ── Stats Counter ── */
